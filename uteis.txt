@@ -1,0 +1,4 @@
+---- Links uteis para apoio 
+
+-- Redmine, tarefas de QAFBT para automação.
+https://redmine.techne.com.br/projects/qafbt-quality-assurance-factory-bug-tracking/issues?utf8=%E2%9C%93&set_filter=1&sort=id%3Adesc&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=fixed_version_id&op%5Bfixed_version_id%5D=%3D&v%5Bfixed_version_id%5D%5B%5D=240&f%5B%5D=tracker_id&op%5Btracker_id%5D=%3D&v%5Btracker_id%5D%5B%5D=20&f%5B%5D=&c%5B%5D=subject&c%5B%5D=tracker&c%5B%5D=priority&c%5B%5D=status&c%5B%5D=due_date&c%5B%5D=assigned_to&c%5B%5D=estimated_hours&c%5B%5D=spent_hours&c%5B%5D=done_ratio&group_by=&t%5B%5D=estimated_hours&t%5B%5D=spent_hours&t%5B%5D=
