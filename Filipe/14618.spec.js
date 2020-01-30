@@ -1,0 +1,15 @@
+describe ("Bug 14618", function(){
+    it ("Confirmação bug",function(){
+        cy.visit ("https://empregabilidade-ui.cronapp.io/#/empresas")
+        cy.get ("input[placeholder='E-mail ou CNPJ']").type ("21333333444422")
+        cy.get ("input[placeholder='Senha']") .type ("21333")
+        cy.get (".btn").first().click()
+        cy.wait (2000)
+        cy.visit ("https://empregabilidade-ui.cronapp.io/#/empresas/cadastro")
+        cy.wait (4000)
+        cy.get (".bloco-cadastro:nth-child(2) .fa-plus-square").click()
+        cy.get(".modal-footer > .btn-success").click()
+        cy.wait (2000)
+        cy.screenshot()
+    })
+})
