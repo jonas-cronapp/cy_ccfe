@@ -1,0 +1,15 @@
+describe ("Bug14615",function(){
+    it("confirnmação bug",function(){
+        cy.visit ("https://empregabilidade-ui.cronapp.io/#/empresas")
+        cy.get ("input[placeholder='E-mail ou CNPJ']").type ("21333333444422")
+        cy.get ("input[placeholder='Senha']") .type ("21333")
+        cy.get (".btn").first().click()
+        cy.wait (2000)
+        cy.visit ("https://empregabilidade-ui.cronapp.io/#/empresas/cadastro")
+        cy.get("body.pace-done:nth-child(2) div.fill.ng-scope:nth-child(2) div.ng-scope div.container-fluid.bg-branco:nth-child(4) div.container:nth-child(1) div.row div.col-md-12.col-lg-9.main-content.content.ng-scope div.ng-scope:nth-child(1) form.ng-valid-email.ng-valid-pattern.ng-valid-maxlength.ng-valid.ng-valid-required.ng-dirty.ng-valid-mask.ng-valid-parse div.col-lg-12.col-md-12 div.cadastro-tab-content.dados-profissionais.info-cad div.bloco-cadastro:nth-child(3) div.row:nth-child(3) div.bloco-cadastro:nth-child(1) table.table.table-hover.table-striped:nth-child(2) tbody:nth-child(2) tr.ng-scope:nth-child(1) td.btn-controllers-align:nth-child(6) button.bt.btn-sm.btn-edit:nth-child(1) > i.fas.fa-edit").click()
+        cy.get("body.pace-done.modal-open:nth-child(2) div.fill.ng-scope:nth-child(2) div.ng-scope div.container-fluid.bg-branco:nth-child(4) div.container:nth-child(1) div.row div.col-md-12.col-lg-9.main-content.content.ng-scope div.modal.fade.ng-scope.in:nth-child(5) div.modal-dialog form.modal-content.ng-valid-pattern.ng-valid-email.ng-valid.ng-valid-required.ng-dirty.ng-valid-mask.ng-valid-parse div.modal-header > button.close").click()
+        cy.get("body.pace-done:nth-child(2) div.fill.ng-scope:nth-child(2) div.ng-scope div.container-fluid.bg-branco:nth-child(4) div.container:nth-child(1) div.row div.col-md-12.col-lg-9.main-content.content.ng-scope div.ng-scope:nth-child(1) form.ng-valid-email.ng-valid-pattern.ng-valid-maxlength.ng-valid.ng-valid-required.ng-dirty.ng-valid-mask.ng-valid-parse div.col-lg-12.col-md-12 div.cadastro-tab-content.dados-profissionais.info-cad div.bloco-cadastro:nth-child(3) div.row:nth-child(3) div.bloco-cadastro:nth-child(1) h3:nth-child(1) > i.fas.fa-plus-square").click()
+        cy.wait (6000)
+        cy.screenshot()
+    })
+})
