@@ -4,18 +4,18 @@ describe("Responsividade", () => {
         cy.viewport(375, 667);
 
 
-        cy.visit("https://empregabilidade-ui.cronapp.io/#/instituicoes/unicuritiba")
+        cy.visit(Cypress.env('nucleo'))
 
         cy.wait(2000)
 
         cy.get("li:nth-child(2) > .selector-profile--item").click()
         
-
-        cy.get("input[ng-model='perfil.login']").type("1410001")
-        cy.get("input[ng-model='perfil.senha']").type("aluno")
+        cy.wait(3000)
+        cy.get("input[ng-model='perfil.login']").type(Cypress.env('loginaluno'))
+        cy.get("input[ng-model='perfil.senha']").type(Cypress.env('senhaaluno'))
         cy.get("button[ng-click='validarLogin(perfil)']").click();
 
-        cy.wait(2000)
+        cy.wait(5000)
         
         cy.get(".menu-btn").click()
         cy.get(".sidebar-links > li:nth-child(1)").click()
