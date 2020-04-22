@@ -1,10 +1,10 @@
 describe('Responsividade Empregabilidade', function () {
     beforeEach(() => {
-        cy.visit('https://empregabilidade-ui.cronapp.io/#/empresas')
+        cy.visit(Cypress.env('empresa'))
 
         cy.wait(3000)
-        cy.get('input[ng-model="perfil.login"]').type('21333333444422');
-        cy.get('input[ng-model="perfil.senha"]').type('21333{enter}');
+        cy.get('input[ng-model="perfil.login"]').type(Cypress.env('loginempresa'));
+        cy.get('input[ng-model="perfil.senha"]').type(Cypress.env('senhaempresa')+'{enter}');
     })
 
     context('720p resolução', function() {
